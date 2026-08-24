@@ -1,10 +1,14 @@
-# For projects using Nanoc (http://nanoc.ws/)
+node_modules/
 
-# Default location for output (needs to match output_dir's value found in nanoc.yaml)
-output/
+database/*.sqlite
+database/*.sqlite-shm
+database/*.sqlite-wal
+database/guilds/*.json
+database/ticketBlacklist.json
 
-# Temporary file directory
-tmp/nanoc/
+backups/
 
-# Crash Log
-crash.log
+config.json.local
+.env
+
+*.log

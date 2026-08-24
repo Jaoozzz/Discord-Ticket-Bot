@@ -1,0 +1,14 @@
+{
+  "name": "bot-ticket",
+  "version": "1.0.0",
+  "description": "Bot de tickets para Discord com painel de configuração, SLA, fila, avaliações e transcript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "discord.js": "^14.14.1",
+    "qrcode": "^1.5.3"
+  }
+}

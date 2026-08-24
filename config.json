@@ -1,0 +1,118 @@
+{
+  "token": "",
+  "clientId": "",
+  "guildId": "",
+  "ownerId": [""],
+
+  "brand": "Bot Ticket",
+  "accentColor": "0b0b0b",
+  "panelMode": "both",
+  "maxTicketsPerUser": 2,
+  "closeDelaySeconds": 5,
+  "transcriptLimit": 150,
+  "ratingsEnabled": true,
+  "allowOwnerClose": true,
+  "formEnabled": true,
+  "autoClaim": true,
+  "formExtraLabel": "",
+  "sla": {
+    "enabled": true,
+    "minutes": 15
+  },
+  "faq": [
+    {
+      "question": "Quanto tempo demora o atendimento?",
+      "answer": "Atendemos por ordem de chegada. No horário comercial a resposta costuma ser rápida. Fora do horário pode demorar mais."
+    },
+    {
+      "question": "Como faço para comprar?",
+      "answer": "Abra um ticket em **Compras**, diga o que precisa e aguarde. O pagamento (Pix) pode ser gerado dentro do ticket."
+    },
+    {
+      "question": "Meu ticket foi fechado, e agora?",
+      "answer": "Se ainda precisar de ajuda, abra um novo ticket com o mesmo assunto e o ID do ticket antigo, se tiver."
+    }
+  ],
+
+  "staffRole": "",
+  "ticketCategory": "",
+  "logsChannel": "",
+  "welcomeChannel": "",
+  "atendimentoUrl": "",
+  "infoUrl": "",
+  "pixPayload": "",
+  "pixKey": "",
+  "bannerUrl": "",
+  "iconUrl": "",
+
+  "businessHours": {
+    "enabled": false,
+    "timezoneOffset": -3,
+    "days": [1, 2, 3, 4, 5],
+    "open": "09:00",
+    "close": "18:00",
+    "message": "Estamos fora do horário de atendimento (seg–sex, 09:00–18:00)."
+  },
+
+  "autoClose": {
+    "enabled": true,
+    "warnMinutes": 120,
+    "closeMinutes": 180
+  },
+
+  "ticketButtons": {
+    "claim": true,
+    "transfer": true,
+    "status": true,
+    "priority": true,
+    "notify": true,
+    "addUser": true,
+    "pix": true,
+    "transcript": true
+  },
+
+  "ticketTypes": [
+    {
+      "id": "atendimento",
+      "label": "Atendimento",
+      "description": "Suporte geral e dúvidas",
+      "emoji": "",
+      "categoryId": "",
+      "includePix": true,
+      "buttonStyle": 3
+    },
+    {
+      "id": "compras",
+      "label": "Compras",
+      "description": "Adquirir produtos / preços",
+      "emoji": "",
+      "categoryId": "",
+      "includePix": true,
+      "buttonStyle": 1
+    },
+    {
+      "id": "bugs",
+      "label": "Bugs",
+      "description": "Reportar erros",
+      "emoji": "",
+      "categoryId": "",
+      "includePix": false,
+      "buttonStyle": 2
+    }
+  ],
+
+  "statusOptions": [
+    { "label": "Aguardando", "value": "Aguardando", "emoji": "" },
+    { "label": "Em atendimento", "value": "Em atendimento", "emoji": "" },
+    { "label": "Instalação", "value": "Instalação", "emoji": "" },
+    { "label": "Dúvidas", "value": "Dúvidas", "emoji": "" },
+    { "label": "Suporte", "value": "Suporte", "emoji": "" },
+    { "label": "Compras", "value": "Compras", "emoji": "" },
+    { "label": "Bugs", "value": "Bugs", "emoji": "" },
+    { "label": "Aguardando pagamento", "value": "Aguardando pagamento", "emoji": "" }
+  ],
+
+  "panelTitle": "Central de Atendimento",
+  "panelDescription": "Abra um ticket para falar com a equipe.\nLeia as instruções e evite menções desnecessárias.\nHá uma fila — aguarde sua vez.",
+  "panelFooter": "Use o menu ou os botões abaixo para abrir seu atendimento."
+}
