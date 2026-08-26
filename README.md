@@ -1,10 +1,4 @@
-<div align="center">
-
-# Bot Ticket
-
-<img src="./assets/ticket.webp" alt="Screenshot do Ticket" width="600px">
-
-</div>
+# <img src="./assets//ticket.webp" width="28" height="28" style="vertical-align: middle;"> Bot Ticket
 
 > Sistema completo de tickets para Discord, desenvolvido em **Node.js** com **discord.js v14** e **SQLite**.
 
