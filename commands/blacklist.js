@@ -51,7 +51,7 @@ module.exports = {
       const motivo = interaction.options.getString("motivo") || "Sem motivo";
       const dias = interaction.options.getInteger("dias");
       const until = dias ? Date.now() + dias * 86400000 : null;
-      block(user.id, { reason: motivo, until, by: interaction.user.id });
+      block(user.id, { reason: motivo, until, by: interaction.user.id, guildId: interaction.guild.id });
       return interaction.reply({
         content: `${user} bloqueado.\nMotivo: ${motivo}${dias ? `\nDias: ${dias}` : "\nPermanente"}`,
         flags: MessageFlags.Ephemeral
@@ -60,7 +60,7 @@ module.exports = {
 
     if (sub === "remove") {
       const user = interaction.options.getUser("usuario");
-      const ok = unblock(user.id);
+      const ok = unblock(user.id, interaction.guild.id);
       return interaction.reply({
         content: ok ? `${user} desbloqueado.` : "Não estava na blacklist.",
         flags: MessageFlags.Ephemeral
@@ -68,7 +68,7 @@ module.exports = {
     }
 
     if (sub === "list") {
-      const list = listBlocked();
+      const list = listBlocked(interaction.guild.id);
       const text =
         list
           .slice(0, 30)
@@ -84,7 +84,7 @@ module.exports = {
 
     if (sub === "check") {
       const user = interaction.options.getUser("usuario");
-      const e = isBlocked(user.id);
+      const e = isBlocked(user.id, interaction.guild.id);
       return interaction.reply({
         content: e
           ? `${user} bloqueado: **${e.reason}**`
