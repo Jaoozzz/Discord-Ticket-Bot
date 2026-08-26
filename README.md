@@ -27,7 +27,7 @@ O projeto foi desenvolvido pensando em ser **simples de instalar, fácil de conf
 
 ## <img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Recursos
 
-* <img src="./assets/ticket.webp" width="26" height="26" style="vertical-align: middle;"> Sistema completo de tickets
+* <img src="./assets/ticket.webp" width="24" height="24" style="vertical-align: middle;"> Sistema completo de tickets
 * <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Painel interativo para abertura de tickets
 * <img src="./assets/rules.webp" width="26" height="26" style="vertical-align: middle;"> Formulários através de Modals
 * <img src="./assets/user.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de fila de atendimento
