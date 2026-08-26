@@ -2,7 +2,7 @@
 
 # Bot Ticket
 
-<img src="./assets/screenshots/ticket.webp" alt="Screenshot do Ticket" width="600px">
+<img src="./assets/ticket.webp" alt="Screenshot do Ticket" width="600px">
 
 </div>
 
