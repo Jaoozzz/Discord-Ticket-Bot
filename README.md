@@ -1,4 +1,10 @@
-# ![Ticket](./assets/screenshots/ticket.webp) Bot Ticket
+<div align="center">
+
+# Bot Ticket
+
+<img src="./assets/screenshots/ticket.webp" alt="Screenshot do Ticket" width="600px">
+
+</div>
 
 > Sistema completo de tickets para Discord, desenvolvido em **Node.js** com **discord.js v14** e **SQLite**.
 
