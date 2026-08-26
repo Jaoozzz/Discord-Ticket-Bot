@@ -28,9 +28,9 @@ module.exports = {
     }
 
     const meta = getTicketMeta(interaction.channel.id) || {};
-    const cfg = loadConfig();
+    const cfg = loadConfig(interaction.guild.id);
     const p = priorityInfo(meta.priority || "normal");
-    const q = getQueuePosition(meta.typeId, interaction.channel.id);
+    const q = getQueuePosition(meta.typeId, interaction.channel.id, interaction.guild.id);
     const created = meta.createdAt ? Math.floor(meta.createdAt / 1000) : null;
 
     const embed = new EmbedBuilder()
