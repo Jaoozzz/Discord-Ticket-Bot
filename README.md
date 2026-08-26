@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Sobre
+## <img src="./assets/fixed.webp" width="26" height="26" style="vertical-align: middle;"> Sobre
 
 O **Bot Ticket** é um sistema completo de atendimento para servidores Discord.
 
@@ -25,48 +25,48 @@ O projeto foi desenvolvido pensando em ser **simples de instalar, fácil de conf
 
 ---
 
-## ✨ Recursos
+## <img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Recursos
 
-* 🎫 Sistema completo de tickets
-* 🖱️ Painel interativo para abertura de tickets
-* 📝 Formulários através de Modals
-* 👥 Sistema de fila de atendimento
-* 🙋 Sistema de atendimento/`claim`
-* 🔄 Transferência de tickets
-* ⭐ Avaliação do atendimento
-* 🚦 Sistema de prioridade
-* ⏱️ SLA de primeira resposta
-* 💤 Fechamento automático por inatividade
-* 📝 Notas internas para a equipe
-* 🚫 Sistema de blacklist
-* 📄 Transcripts em `.txt` e `.html`
-* 💰 Geração de QR Code para Pix
-* 🕐 Horário comercial configurável
-* 💾 Backup automático do banco de dados
-* ⚙️ Painel de configuração diretamente pelo Discord
-* 🌐 Suporte a múltiplos servidores
-* 🗃️ Banco de dados SQLite
+* <img src="./assets/ticket.webp" width="26" height="26" style="vertical-align: middle;"> Sistema completo de tickets
+* <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Painel interativo para abertura de tickets
+* <img src="./assets/rules.webp" width="26" height="26" style="vertical-align: middle;"> Formulários através de Modals
+* <img src="./assets/usser.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de fila de atendimento
+* <img src="./assets/user.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de atendimento/`claim`
+* <img src="./assets/i.webp" width="26" height="26" style="vertical-align: middle;"> Transferência de tickets
+* <img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Avaliação do atendimento
+* <img src="./assets/support.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de prioridade
+* <img src="./assets/clock.webp" width="26" height="26" style="vertical-align: middle;"> SLA de primeira resposta
+* <img src="./assets/clock.webp" width="26" height="26" style="vertical-align: middle;"> Fechamento automático por inatividade
+* <img src="./assets/rules.webp" width="26" height="26" style="vertical-align: middle;"> Notas internas para a equipe
+* <img src="./assets/warn.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de blacklist
+* <img src="./assets/papel.webp" width="26" height="26" style="vertical-align: middle;"> Transcripts em `.txt` e `.html`
+* <img src="./assets/cart.webp" width="26" height="26" style="vertical-align: middle;"> Geração de QR Code para Pix
+* <img src="./assets/clock.webp" width="26" height="26" style="vertical-align: middle;"> Horário comercial configurável
+* <img src="./assets/database.webp" width="26" height="26" style="vertical-align: middle;"> Backup automático do banco de dados
+* <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Painel de configuração diretamente pelo Discord
+* <img src="./assets/support2.webp" width="26" height="26" style="vertical-align: middle;"> Suporte a múltiplos servidores
+* <img src="./assets/database.webp" width="26" height="26" style="vertical-align: middle;"> Banco de dados SQLite
 
 ---
 
-## 📊 Desempenho
+## <img src="./assets/turnoff.webp" width="26" height="26" style="vertical-align: middle;"> Desempenho
 
 O consumo pode variar de acordo com a quantidade de servidores, tickets, usuários e atividades realizadas pelo bot.
 
 | Recurso           |    Consumo observado |
 | ----------------- | -------------------: |
-| 🧠 RAM            | **~100 MB — 250 MB** |
-| ⚡ CPU             |  **~0.0 — 0.1 vCPU** |
-| 📦 Projeto        |         **~80.6 KB** |
-| 📁 `node_modules` |     **Não incluído** |
+| <img src="./assets/memory.webp" width="26" height="26" style="vertical-align: middle;"> RAM            | **~100 MB — 250 MB** |
+| <img src="./assets/cpu.webp" width="26" height="26" style="vertical-align: middle;"> CPU             |  **~0.0 — 0.1 vCPU** |
+| <img src="./assets/storage.webp" width="26" height="26" style="vertical-align: middle;"> Projeto        |         **~80.6 KB** |
+| <img src="./assets/archives.webp" width="26" height="26" style="vertical-align: middle;"> `node_modules` |     **Não incluído** |
 
-> ⚠️ Os valores de RAM e CPU são estimativas baseadas em testes iniciais e podem variar dependendo da hospedagem e da utilização do bot.
+> <img src="./assets/warn.webp" width="26" height="26" style="vertical-align: middle;"> Os valores de RAM e CPU são estimativas baseadas em testes iniciais e podem variar dependendo da hospedagem e da utilização do bot.
 
 O tamanho de **80.6 KB** considera o projeto distribuído sem a pasta `node_modules`.
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## <img src="./assets/support2.webp" width="26" height="26" style="vertical-align: middle;"> Tecnologias utilizadas
 
 | Tecnologia         | Utilização             |
 | ------------------ | ---------------------- |
@@ -78,7 +78,7 @@ O tamanho de **80.6 KB** considera o projeto distribuído sem a pasta `node_modu
 
 ---
 
-## 📥 Download
+## <img src="./assets/archives.webp" width="26" height="26" style="vertical-align: middle;"> Download
 
 ### Download rápido
 
@@ -86,7 +86,7 @@ O tamanho de **80.6 KB** considera o projeto distribuído sem a pasta `node_modu
 
 O download acima contém o código do projeto disponível no repositório e **não inclui `node_modules`**.
 
-> 💡 Para uma versão específica e estável do bot, recomenda-se utilizar as **Releases** do GitHub quando estiverem disponíveis.
+> <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Para uma versão específica e estável do bot, recomenda-se utilizar as **Releases** do GitHub quando estiverem disponíveis.
 
 ### Código-fonte
 
@@ -94,7 +94,7 @@ O download acima contém o código do projeto disponível no repositório e **n�
 
 ---
 
-## 🚀 Instalação
+## <img src="./assets/discord.webp" width="26" height="26" style="vertical-align: middle;"> Instalação
 
 ### Requisitos
 
@@ -149,7 +149,7 @@ Se tudo estiver configurado corretamente, o bot ficará online e registrará os 
 
 ---
 
-## ⚙️ Primeira configuração
+## <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Primeira configuração
 
 Depois de colocar o bot online:
 
@@ -189,7 +189,7 @@ A partir disso, os usuários poderão abrir seus tickets normalmente.
 
 ---
 
-## 💻 Comandos
+## <img src="./assets/cpu.webp" width="26" height="26" style="vertical-align: middle;"> Comandos
 
 | Comando        | Permissão                  | Função                              |
 | -------------- | -------------------------- | ----------------------------------- |
@@ -209,7 +209,7 @@ A partir disso, os usuários poderão abrir seus tickets normalmente.
 
 ---
 
-## 🎟️ Sistema de atendimento
+## <img src="./assets/ticket.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de atendimento
 
 O painel de tickets permite que a equipe utilize diversas funções diretamente dentro do atendimento.
 
@@ -227,7 +227,7 @@ Entre elas:
 
 ---
 
-## ⏱️ SLA e fechamento automático
+## <img src="./assets/clock.webp" width="26" height="26" style="vertical-align: middle;"> SLA e fechamento automático
 
 O sistema possui recursos para ajudar a equipe a manter os atendimentos organizados.
 
@@ -241,7 +241,7 @@ Tickets que permanecem inativos podem ser avisados e posteriormente fechados aut
 
 ---
 
-## 💾 Banco de dados e backups
+## <img src="./assets/database.webp" width="26" height="26" style="vertical-align: middle;"> Banco de dados e backups
 
 O bot utiliza **SQLite** para armazenar os dados.
 
@@ -259,7 +259,7 @@ O sistema também possui **backup automático**, executado periodicamente.
 
 ---
 
-## 📁 Estrutura do projeto
+## <img src="./assets/archives.webp" width="26" height="26" style="vertical-align: middle;"> Estrutura do projeto
 
 ```text
 Discord-Ticket-Bot/
@@ -279,13 +279,14 @@ Discord-Ticket-Bot/
 ├── index.js
 ├── package.json
 └── package-lock.json
+├── deploy-commands.js
 ```
 
 ---
 
-## 🔐 Segurança
+## <img src="./assets/security.webp" width="26" height="26" style="vertical-align: middle;"> Segurança
 
-### ⚠️ Nunca compartilhe seu token
+### <img src="./assets/warn.webp" width="26" height="26" style="vertical-align: middle;"> Nunca compartilhe seu token
 
 O token do bot funciona como uma senha.
 
@@ -300,13 +301,13 @@ Caso o token seja exposto, gere um novo token imediatamente pelo Discord Develop
 
 ---
 
-## 📜 Uso e redistribuição
+## <img src="./assets/rules.webp" width="26" height="26" style="vertical-align: middle;"> Uso e redistribuição
 
 O **Bot Ticket** é disponibilizado para utilização e modificação livre.
 
 Você pode utilizar o projeto em seus próprios servidores e realizar alterações no código para adaptá-lo às suas necessidades.
 
-### ⚠️ Ao redistribuir
+### <img src="./assets/warn.webp" width="26" height="26" style="vertical-align: middle;"> Ao redistribuir
 
 Caso você publique uma versão modificada ou disponibilize este projeto em outro repositório, **mantenha a atribuição ao projeto original e inclua o repositório original como fonte**.
 
@@ -320,7 +321,7 @@ Não remova a referência ao projeto original ao redistribuir o código.
 
 ---
 
-## ❓ FAQ
+## <img src="./assets/i.webp" width="26" height="26" style="vertical-align: middle;"> FAQ
 
 ### Preciso saber programar?
 
@@ -370,7 +371,7 @@ Abra uma **Issue** no repositório descrevendo:
 
 ---
 
-## 🤝 Contribuição
+## <img src="./assets/support.webp" width="26" height="26" style="vertical-align: middle;"> Contribuição
 
 Contribuições são bem-vindas.
 
@@ -384,24 +385,24 @@ Você pode:
 
 ---
 
-## 🔗 Links
+## <img src="./assets/search.webp" width="26" height="26" style="vertical-align: middle;"> Links
 
-**Repositório:**
+<img src="./assets/support2.webp" width="26" height="26" style="vertical-align: middle;"> **Repositório:**
 https://github.com/Jaoozzz/Discord-Ticket-Bot
 
-**Autor:**
+<img src="./assets/crown.webp" width="26" height="26" style="vertical-align: middle;"> **Autor:**
 [Jaoozzz](https://github.com/Jaoozzz)
 
 ---
 
 <div align="center">
 
-### 🎫 Bot Ticket
+### <img src="./assets/ticket.webp" width="26" height="26" style="vertical-align: middle;"> Bot Ticket
 
 Sistema de tickets para Discord.
 
 **Feito com Node.js, discord.js e SQLite.**
 
-⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório!
+<img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Se este projeto foi útil para você, considere deixar uma estrela no repositório!
 
 </div>
