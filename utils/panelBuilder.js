@@ -6,10 +6,20 @@ const {
   StringSelectMenuOptionBuilder,
   MessageFlags
 } = require("discord.js");
+const fs = require("fs");
 const path = require("path");
 const { loadConfig, getAccent } = require("./configStore");
 
-const LOGO_PATH = path.join(__dirname, "../img/logo.png");
+const IMG_DIR = path.join(__dirname, "../img");
+const LOGO_EXTENSIONS = ["png", "jpg", "jpeg", "webp", "gif"];
+
+function findLogoPath() {
+  for (const ext of LOGO_EXTENSIONS) {
+    const p = path.join(IMG_DIR, `logo.${ext}`);
+    if (fs.existsSync(p)) return p;
+  }
+  return null;
+}
 
 const STYLE_MAP = {
   1: ButtonStyle.Primary,
@@ -54,14 +64,18 @@ function buildPublicPanel(guild) {
 
   const container = new ContainerBuilder().setAccentColor(accent);
 
-  // Banner: URL custom ou arquivo local
-  const bannerMedia = cfg.bannerUrl && String(cfg.bannerUrl).startsWith("http")
-    ? cfg.bannerUrl
-    : "attachment://logo.png";
+  // Banner: URL custom, arquivo local (se existir), ou nenhum
+  const hasHttpBanner = cfg.bannerUrl && String(cfg.bannerUrl).startsWith("http");
+  const logoPath = findLogoPath();
+  const logoName = logoPath ? path.basename(logoPath) : null;
+  const showBanner = hasHttpBanner || Boolean(logoPath);
+  const bannerMedia = hasHttpBanner ? cfg.bannerUrl : `attachment://${logoName}`;
 
-  container.addMediaGalleryComponents(g =>
-    g.addItems(item => item.setURL(bannerMedia))
-  );
+  if (showBanner) {
+    container.addMediaGalleryComponents(g =>
+      g.addItems(item => item.setURL(bannerMedia))
+    );
+  }
 
   // Ícone opcional via section thumbnail
   const title = cfg.panelTitle || brand;
@@ -157,8 +171,8 @@ function buildPublicPanel(guild) {
   }
 
   const files = [];
-  if (!cfg.bannerUrl || !String(cfg.bannerUrl).startsWith("http")) {
-    files.push({ attachment: LOGO_PATH, name: "logo.png" });
+  if (!hasHttpBanner && logoPath) {
+    files.push({ attachment: logoPath, name: logoName });
   }
 
   return {
@@ -168,136 +182,9 @@ function buildPublicPanel(guild) {
   };
 }
 
-/** Painel interno do canal do ticket */
-function buildTicketChannelPanel({ user, typeLabel, status, includePix, claimedBy, mentionLine }) {
-  const cfg = loadConfig();
-  const accent = getAccent(cfg);
-  const brand = cfg.brand || "Bot Ticket";
-  const statusText = status || "Aguardando";
-  const claimText = claimedBy ? `\n**Atendente** · <@${claimedBy}>` : "";
-  const bannerMedia =
-    cfg.bannerUrl && String(cfg.bannerUrl).startsWith("http")
-      ? cfg.bannerUrl
-      : "attachment://logo.png";
-
-  const container = new ContainerBuilder()
-    .setAccentColor(accent)
-    .addMediaGalleryComponents(g =>
-      g.addItems(item => item.setURL(bannerMedia))
-    )
-    .addTextDisplayComponents(
-      t => t.setContent(`# ${brand} · Ticket`),
-      t =>
-        t.setContent(
-          [
-            mentionLine || "",
-            `Olá **${user.username}**`,
-            `**Tipo** · \`${typeLabel || "Geral"}\``,
-            `**Status** · \`${statusText}\`${claimText}`,
-            "",
-            "Descreva o assunto com clareza e aguarde a equipe.",
-            includePix
-              ? "Se for compra, use **Pix** quando estiver pronto."
-              : "A staff vai te atender em breve.",
-            "",
-            "-# Canal privado entre você e a equipe."
-          ]
-            .filter(Boolean)
-            .join("\n")
-        )
-    )
-    .addSeparatorComponents(s => s.setSpacing(2).setDivider(true));
-
-  const row1 = [
-    new ButtonBuilder()
-      .setCustomId("ticket_claim")
-      .setLabel("Assumir")
-      .setStyle(ButtonStyle.Success),
-    new ButtonBuilder()
-      .setCustomId("ticket_status")
-      .setLabel("Status")
-      .setStyle(ButtonStyle.Primary),
-    new ButtonBuilder()
-      .setCustomId("notificar")
-      .setLabel("Notificar")
-      .setStyle(ButtonStyle.Secondary)
-  ];
-
-  if (includePix) {
-    row1.push(
-      new ButtonBuilder()
-        .setCustomId("qrcode")
-        .setLabel("Pix")
-        .setStyle(ButtonStyle.Success)
-    );
-  }
-
-  container.addActionRowComponents(row => row.setComponents(...row1.slice(0, 5)));
-
-  container.addActionRowComponents(row =>
-    row.setComponents(
-      new ButtonBuilder()
-        .setCustomId("fechar_ticket")
-        .setLabel("Encerrar")
-        .setStyle(ButtonStyle.Secondary)
-    )
-  );
-
-  return container;
-}
-
-function buildStatusSelect() {
-  const cfg = loadConfig();
-  const accent = getAccent(cfg);
-  const options = (cfg.statusOptions || []).slice(0, 25);
-
-  const select = new StringSelectMenuBuilder()
-    .setCustomId("ticket_status_select")
-    .setPlaceholder("Selecionar status...")
-    .addOptions(
-      options.map(o => {
-        const opt = new StringSelectMenuOptionBuilder()
-          .setLabel(o.label)
-          .setValue(o.value);
-        if (o.emoji) opt.setEmoji(parseEmoji(o.emoji));
-        return opt;
-      })
-    );
-
-  return new ContainerBuilder()
-    .setAccentColor(accent)
-    .addTextDisplayComponents(
-      t => t.setContent(`# Status do ticket`),
-      t => t.setContent("Escolha o status no menu abaixo.")
-    )
-    .addSeparatorComponents(s => s.setSpacing(1).setDivider(true))
-    .addActionRowComponents(row => row.setComponents(select));
-}
-
-function buildOpenSuccess(guildId, channelId) {
-  const cfg = loadConfig();
-  return new ContainerBuilder()
-    .setAccentColor(getAccent(cfg))
-    .addTextDisplayComponents(t =>
-      t.setContent(`### Ticket aberto\n-# Seu atendimento foi criado com sucesso.`)
-    )
-    .addSeparatorComponents(s => s.setDivider(true))
-    .addActionRowComponents(row =>
-      row.setComponents(
-        new ButtonBuilder()
-          .setLabel("Ir para o ticket")
-          .setStyle(ButtonStyle.Link)
-          .setURL(`https://discord.com/channels/${guildId}/${channelId}`)
-      )
-    );
-}
-
 module.exports = {
-  LOGO_PATH,
+  findLogoPath,
   buildPublicPanel,
-  buildTicketChannelPanel,
-  buildStatusSelect,
-  buildOpenSuccess,
   parseEmoji,
   applyEmoji,
   resolveStyle
