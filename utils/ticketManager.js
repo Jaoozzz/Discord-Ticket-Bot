@@ -54,7 +54,7 @@ async function openTicket(interaction, typeId, form = {}) {
 
   const userId = interaction.user.id;
 
-  const blocked = isBlocked(userId);
+  const blocked = isBlocked(userId, guildId);
   if (blocked) {
     const msg = `Você está bloqueado de abrir tickets.\n**Motivo:** ${blocked.reason}`;
     if (interaction.deferred || interaction.replied) return interaction.editReply({ content: msg });
