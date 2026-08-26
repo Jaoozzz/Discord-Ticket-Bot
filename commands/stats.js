@@ -16,11 +16,11 @@ module.exports = {
       return interaction.reply({ content: "Apenas staff.", flags: MessageFlags.Ephemeral });
     }
 
-    const cfg = loadConfig();
-    const open = listOpenMetas().length;
-    const ratings = getStats();
-    const bl = listBlocked().length;
-    const free = listOpenMetas().filter(m => !m.claimedBy).length;
+    const cfg = loadConfig(interaction.guild.id);
+    const open = listOpenMetas(interaction.guild.id).length;
+    const ratings = getStats(interaction.guild.id);
+    const bl = listBlocked(interaction.guild.id).length;
+    const free = listOpenMetas(interaction.guild.id).filter(m => !m.claimedBy).length;
 
     const embed = new EmbedBuilder()
       .setColor(getAccent(cfg))
