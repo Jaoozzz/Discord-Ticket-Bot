@@ -31,7 +31,7 @@ O projeto foi desenvolvido pensando em ser **simples de instalar, fácil de conf
 * <img src="./assets/bot.png" width="26" height="26" style="vertical-align: middle;"> Painel interativo para abertura de tickets
 * <img src="./assets/rules.webp" width="26" height="26" style="vertical-align: middle;"> Formulários através de Modals
 * <img src="./assets/user.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de fila de atendimento
-* <img src="./assets/user.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de atendimento/`claim`
+* <img src="./assets/support.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de atendimento /`claim`
 * <img src="./assets/i.webp" width="26" height="26" style="vertical-align: middle;"> Transferência de tickets
 * <img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Avaliação do atendimento
 * <img src="./assets/support.webp" width="26" height="26" style="vertical-align: middle;"> Sistema de prioridade
