@@ -1,4 +1,4 @@
-# ![Painel de Tickets](./assets/screenshots/ticket.webp) Bot Ticket
+# ![Ticket](./assets/screenshots/ticket.webp) Bot Ticket
 
 > Sistema completo de tickets para Discord, desenvolvido em **Node.js** com **discord.js v14** e **SQLite**.
 
