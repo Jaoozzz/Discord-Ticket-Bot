@@ -1,4 +1,3 @@
-```markdown
 # <img src="./assets//ticket.webp" width="28" height="28" style="vertical-align: middle;"> Bot Ticket
 
 > A complete Discord ticket and support system built with **Node.js**, **discord.js v14**, and **SQLite**.
