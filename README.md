@@ -406,3 +406,6 @@ Sistema de tickets para Discord.
 <img src="./assets/star.webp" width="26" height="26" style="vertical-align: middle;"> Se este projeto foi útil para você, considere deixar uma estrela no repositório!
 
 </div>
+<p align="center">
+  <sub>© 2026 Jaooz. All rights reserved.</sub>
+</p>
